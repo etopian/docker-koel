@@ -66,7 +66,7 @@ COPY files/.env /DATA/htdocs/.env
 
 RUN chown nginx:nginx /DATA/htdocs/.env
 
-#RUN cd /DATA/htdocs && php artisan init
+RUN su nginx -c "cd /DATA/htdocs && php artisan init"
 
 EXPOSE 80
 CMD ["/run.sh"]
