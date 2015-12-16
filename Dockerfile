@@ -29,9 +29,14 @@ RUN rm -rf /var/cache/apk/*
 
 ENV TERM="xterm" \
     DB_HOST="172.17.0.1" \
-    DB_NAME="" \
-    DB_USER=""\
-    DB_PASS=""
+    DB_DATABASE="" \
+    DB_USERNAME=""\
+    DB_PASSWORD=""\
+    ADMIN_EMAIL=""\
+    ADMIN_NAME=""\
+    ADMIN_PASSWORD=""\
+    APP_DEBUG=false\
+    AP_ENV=production
 
 
 VOLUME ["/DATA/music"]
