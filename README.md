@@ -1,5 +1,7 @@
 # docker-koel - Alpine Linux, PHP-FPM, Nginx, NodeJS
 
+Issue: https://github.com/phanan/koel/issues/10
+
 You can modify files/.env and rebuild this image to suite your needs.
 
 You can also just pull etopian/docker-koel and modify the /DATA/htdocs/.env file interactively.
