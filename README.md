@@ -6,8 +6,8 @@ You can expose /DATA to your host's file system and get all the files in the koe
 
 Alpine Linux, PHP-FPM, Nginx, NodeJS
 
-Uncomment the file that says
+Uncomment the line in the Dockerfile that says
 
-#cd /DATA/htdocs && php artisan init
+cd /DATA/htdocs && php artisan init
 
 or exec -it into the container and then su nginx... and cd /DATA/htdocs && php artisan init
