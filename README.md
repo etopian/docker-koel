@@ -20,3 +20,4 @@ There is also a line in the Dockerfile for a github token in case github starts 
 
 todo:
 - Use Docker enviornment variables to write out the .env file so those can be passed at runtime.
+- Delete useless files after it's installed.
