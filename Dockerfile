@@ -34,7 +34,7 @@ ENV TERM="xterm" \
     DB_PASS=""
 
 
-VOLUME ["/DATA"]
+VOLUME ["/DATA/music"]
 
 
 
@@ -45,16 +45,22 @@ RUN sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php/php.ini && \
 ADD files/nginx.conf /etc/nginx/
 ADD files/php-fpm.conf /etc/php/
 ADD files/run.sh /
-RUN chmod +x /run.sh && chown nginx:nginx /DATA
+RUN chmod +x /run.sh && chown -R nginx:nginx /DATA
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 
-RUN su nginx && git clone https://github.com/phanan/koel /DATA/htdocs &&\
+
+RUN su nginx -c "git clone https://github.com/phanan/koel /DATA/htdocs &&\
     cd /DATA/htdocs &&\
     npm install &&\
-    composer install
+    composer config github-oauth.github.com 7e11b9deb00b218e8b33672c399098297631b09d &&\
+    composer install"
+
+
 
 COPY files/.env /DATA/htdocs/.env
+
+RUN chown nginx:nginx /DATA/htdocs/.env
 
 #RUN cd /DATA/htdocs && php artisan init
 
