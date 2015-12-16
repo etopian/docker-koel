@@ -57,7 +57,6 @@ RUN su nginx -c "git clone https://github.com/phanan/koel /DATA/htdocs &&\
     composer install"
 
 
-
 COPY files/.env /DATA/htdocs/.env
 
 RUN chown nginx:nginx /DATA/htdocs/.env
