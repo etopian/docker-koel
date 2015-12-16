@@ -2,7 +2,9 @@
 
 You must modify files/.env and rebuild this image to suite your needs.
 
-You can expose /DATA to your host's file system and get all the files in the koel directory.
+You can expose /DATA/music and put all your music there. Make sure the permissions are fixed on the host:
+
+`chown 100:101 /DATA/music`
 
 Alpine Linux, PHP-FPM, Nginx, NodeJS
 
