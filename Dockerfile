@@ -53,7 +53,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -
 RUN su nginx -c "git clone https://github.com/phanan/koel /DATA/htdocs &&\
     cd /DATA/htdocs &&\
     npm install &&\
-    composer config github-oauth.github.com 7e11b9deb00b218e8b33672c399098297631b09d &&\
+    composer config github-oauth.github.com  2084a22e9bdb38f94d081ab6f2d5fd339b5292e8 &&\
     composer install"
 
 
