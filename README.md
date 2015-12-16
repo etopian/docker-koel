@@ -10,4 +10,8 @@ After you fix .env uncomment the line in the Dockerfile that says
 
 cd /DATA/htdocs && php artisan init
 
-or exec -it into the container and then su nginx... and cd /DATA/htdocs && php artisan init
+or exec -it into the container and then 
+
+`su nginx && cd /DATA/htdocs && php artisan init`
+
+There is also a line in the Dockerfile for a github token in case github starts rate limiting you, you will need a token.
