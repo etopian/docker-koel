@@ -29,5 +29,4 @@ After this init the site via exec
 ```
 docker exec {container} su nginx -c "cd /DATA/htdocs && php artisan init"
 ```
-todo:
-- Delete useless files after it's installed.
+
