@@ -19,7 +19,7 @@ RUN apk update \
     php-pdo_mysql php-mysqli \
     php-gd php-iconv php-mcrypt \
     php-mysql php-curl php-opcache php-ctype php-apcu \
-    php-intl php-bcmath php-dom php-xmlreader mysql-client \
+    php-intl php-bcmath php-dom php-xmlreader php-xsl mysql-client \
     git build-base python \
     && apk add -u musl
 
