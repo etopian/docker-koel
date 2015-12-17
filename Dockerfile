@@ -19,11 +19,9 @@ RUN apk update \
     php-pdo_mysql php-mysqli \
     php-gd php-iconv php-mcrypt \
     php-mysql php-curl php-opcache php-ctype php-apcu \
-    php-intl php-bcmath php-dom php-xmlreader mysql-client && apk add -u musl
-
-RUN apk add git build-base
-
-RUN apk add python
+    php-intl php-bcmath php-dom php-xmlreader mysql-client \
+    git build-base python \
+    && apk add -u musl
 
 RUN rm -rf /var/cache/apk/*
 
@@ -60,6 +58,9 @@ RUN su nginx -c "git clone https://github.com/phanan/koel /DATA/htdocs &&\
     npm install &&\
     composer config github-oauth.github.com  2084a22e9bdb38f94d081ab6f2d5fd339b5292e8 &&\
     composer install"
+
+#clean up
+RUN apk del --purge git build-base python nodejs
 
 
 COPY files/.env /DATA/htdocs/.env
