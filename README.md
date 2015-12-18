@@ -30,4 +30,4 @@ After this init the site via exec
 docker exec {container} su nginx -c "cd /DATA/htdocs && php artisan init"
 ```
 
-If you want to link a container you can do it with this image.. just specify the link as the DB_HOST, i.e. if the link is called mysql then asy -v DB_HOST=mysql.
+If you want to link a database container you can do it with this image.. just specify the link as the DB_HOST, i.e. if the link is called mysql then asy -v DB_HOST=mysql.
