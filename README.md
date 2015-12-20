@@ -31,3 +31,5 @@ docker exec {container} su nginx -c "cd /DATA/htdocs && php artisan init"
 ```
 
 If you want to link a database container you can do it with this image.. just specify the link as the DB_HOST, i.e. if the link is called mysql then say -e DB_HOST=mysql.
+
+If you are trying to build the image, you need to provide a GitHub token in the Dockerfile. The given token is revoked.
