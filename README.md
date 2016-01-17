@@ -2,6 +2,8 @@
 
 Issue: https://github.com/phanan/koel/issues/10
 
+Documentation: https://qoba.lt/koel_with_docker.html
+
 The .env file is dynamic using Docker variables.
 
 You can expose /DATA/music and put all your music there. Make sure the permissions are fixed on the host:
